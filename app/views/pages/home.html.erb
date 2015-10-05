@@ -2,9 +2,14 @@
 <div class="jumbotron center">
 	<body background="http://www.dsogaming.com/wp-content/uploads/2012/01/ScreenShot0034.jpg">
      <h1>Welcome to my app!</h1>
+     <h3>My name is Jeff</h3>
+     <% if user_signed_in? %>
+          # do something
+     <% else %>
      <p>
-       <%= link_to "Log in", "#", class: "btn btn-default btn-lg" %>
-       <%= link_to "Sign up", "#", class: "btn btn-success btn-lg" %>
-  </p>  
+       <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+       <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-lg" %>
+    </p>  
+    <% end %>
   </body>
 </div>
